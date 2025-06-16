@@ -1,0 +1,19 @@
+{
+  "name": "@timkendrick/syntax",
+  "version": "0.0.1",
+  "description": "TypeScript parser combinator toolkit",
+  "type": "module",
+  "main": "src/lib.ts",
+  "bin": {
+    "syntax-codegen": "scripts/syntax-codegen"
+  },
+  "scripts": {
+    "verify": "pnpm run lint && pnpm run test",
+    "lint": "eslint --ext js,jsx,cjs,mjs,ts,tsx,cts,mts .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "keywords": ["parser", "combinator", "typescript"],
+  "author": "Tim Kendrick <timkendrick@gmail.com>",
+  "license": "UNLICENSED"
+}
