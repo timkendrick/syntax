@@ -1,0 +1,40 @@
+{
+  "name": "@timkendrick/syntax",
+  "version": "0.0.1",
+  "description": "TypeScript parser combinator toolkit",
+  "author": "Tim Kendrick <timkendrick@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib.ts",
+  "module": "./lib.ts",
+  "pkg": {
+    "type": "module",
+    "main": "./lib/lib.cjs",
+    "module": "./lib/lib.js",
+    "types": "./lib.d.ts",
+    "exports": {
+      ".": {
+        "import": "./lib/lib.js",
+        "require": "./lib/lib.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "lint": "pnpm run /^lint:/",
+    "lint:eslint": "eslint --ext js,jsx,cjs,mjs,ts,tsx,cts,mts .",
+    "lint:typescript": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "build": "pnpm run build:lib && pnpm run build:pkg",
+    "build:lib": "vite build",
+    "build:pkg": "pkg . ./dist/package.json"
+  },
+  "devDependencies": {
+    "@timkendrick/build-config": "workspace:*",
+    "eslint": "^8",
+    "prettier": "^3",
+    "typescript": "^5",
+    "vite": "^6",
+    "vitest": "^3"
+  }
+}

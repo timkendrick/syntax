@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "@timkendrick/syntax-workspace",
+  "version": "0.0.1",
+  "description": "Workspace for syntax parser and examples",
+  "type": "module",
+  "scripts": {
+    "verify": "pnpm run /\\(lint|test\\)/",
+    "lint": "pnpm --recursive run lint",
+    "test": "pnpm --recursive run test",
+    "test:watch": "pnpm --recursive run test:watch",
+    "build": "pnpm --recursive run build"
+  },
+  "keywords": [],
+  "author": "Tim Kendrick <timkendrick@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@timkendrick/build-config": "workspace:*"
+  },
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
+}

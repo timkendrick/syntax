@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@timkendrick/syntax-examples",
+  "version": "0.0.1",
+  "description": "Language syntax examples",
+  "author": "Tim Kendrick <timkendrick@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "codegen": "pnpm run syntax-codegen ./src/languages/*.grammar.ts",
+    "syntax-codegen": "node --experimental-transform-types ../syntax-codegen/bin/syntax-codegen",
+    "verify": "pnpm run lint && pnpm run test",
+    "lint": "eslint --ext js,jsx,cjs,mjs,ts,tsx,cts,mts .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@timkendrick/syntax": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": "^8",
+    "prettier": "^3",
+    "typescript": "^5",
+    "vite": "^6",
+    "vitest": "^3"
+  }
+} 

@@ -1,0 +1,4 @@
+{
+  "extends": "./templates/tsc/base.tsconfig.json",
+  "include": ["templates"]
+}

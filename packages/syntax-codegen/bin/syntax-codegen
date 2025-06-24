@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+import { readFileSync, writeFileSync } from 'node:fs';
+import { extname } from 'node:path';
+import { argv, exit, stdout } from 'node:process';
+
+import { codegen } from '../lib.ts';
+
+const args = argv.slice(2);
+
+if (args.length === 0) {
+  stdout.write('Usage: syntax-codegen <input-file>...');
+  exit(1);
+}
+
+// Iterate over each input file and generate the corresponding TypeScript definitions
+for (const inputPath of args) {
+  const source = readFileSync(inputPath, 'utf-8');
+  const output = codegen(source, {
+    moduleName: '@timkendrick/syntax',
+    factory: 'syntax',
+  });
+  // Skip over any files that don't declare a syntax
+  if (output === null) continue;
+  // Write the generated type definitions to a TypeScript declaration file in the same directory
+  const outputPath = replaceExtension(inputPath, '.generated.d.ts');
+  writeFileSync(outputPath, output);
+}
+
+function replaceExtension(filePath, extension) {
+  const existingExtension = extname(filePath);
+  return filePath.slice(0, -existingExtension.length) + extension;
+}

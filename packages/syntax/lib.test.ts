@@ -1,0 +1,45 @@
+import { expect, test } from 'vitest';
+
+import * as lib from './lib.ts';
+
+test('module exports', () => {
+  expect({ ...lib }).toEqual({
+    choice: lib.choice,
+    createGrammar: lib.createGrammar,
+    createParser: lib.createParser,
+    createPatternMatcher: lib.createPatternMatcher,
+    createTokenParser: lib.createTokenParser,
+    empty: lib.empty,
+    eof: lib.eof,
+    extendGrammar: lib.extendGrammar,
+    field: lib.field,
+    findSourceLocation: lib.findSourceLocation,
+    findSourceSpan: lib.findSourceSpan,
+    formatErrorMessage: lib.formatErrorMessage,
+    formatSourceSnippet: lib.formatSourceSnippet,
+    isNodeTypeIdentifier: lib.isNodeTypeIdentifier,
+    isNonNull: lib.isNonNull,
+    list: lib.list,
+    map: lib.map,
+    node: lib.node,
+    oneOrMore: lib.oneOrMore,
+    optional: lib.optional,
+    parse: lib.parse,
+    ParseError: lib.ParseError,
+    Parser: lib.Parser,
+    ParserRuleError: lib.ParserRuleError,
+    parseSyntaxAst: lib.parseSyntaxAst,
+    ResultType: lib.ResultType,
+    sequence: lib.sequence,
+    struct: lib.struct,
+    syntax: lib.syntax,
+    SyntaxGrammar: lib.SyntaxGrammar,
+    SyntaxNodeAliasType: lib.SyntaxNodeAliasType,
+    SyntaxNodeType: lib.SyntaxNodeType,
+    SyntaxTokenType: lib.SyntaxTokenType,
+    text: lib.text,
+    token: lib.token,
+    unreachable: lib.unreachable,
+    zeroOrMore: lib.zeroOrMore,
+  });
+});
