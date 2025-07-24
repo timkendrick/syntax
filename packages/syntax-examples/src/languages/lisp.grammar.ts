@@ -8,7 +8,7 @@ import {
 } from '@timkendrick/syntax';
 
 // Ensure type declarations are exposed for full type inference
-import './lisp.grammar.generated.d.ts';
+import './lisp.grammar.generated.d';
 
 /**
  * Lisp Parser

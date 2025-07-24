@@ -8,7 +8,7 @@ import {
 } from '@timkendrick/syntax';
 
 // Ensure type declarations are exposed for full type inference
-import './lambda-calculus.grammar.generated.d.ts';
+import './lambda-calculus.grammar.generated.d';
 
 /**
  * Lambda Calculus Parser

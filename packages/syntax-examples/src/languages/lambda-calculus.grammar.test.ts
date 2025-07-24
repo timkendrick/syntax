@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { Parser, ResultType, type Result } from '@timkendrick/syntax';
 
-import LambdaCalculusGrammar, { type LambdaCalculusRootNode } from './lambda-calculus.grammar.ts';
+import LambdaCalculusGrammar, { type LambdaCalculusRootNode } from './lambda-calculus.grammar';
 
 describe('Lambda Calculus grammar', () => {
   describe('tokenize', () => {

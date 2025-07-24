@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { Parser, ResultType, type Result } from '@timkendrick/syntax';
 
-import LispGrammar, { type LispRootNode } from './lisp.grammar.ts';
+import LispGrammar, { type LispRootNode } from './lisp.grammar';
 
 describe('Lisp grammar', () => {
   describe('tokenize', () => {

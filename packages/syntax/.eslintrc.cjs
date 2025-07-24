@@ -6,4 +6,8 @@ module.exports = {
     ...base.parserOptions,
     tsconfigRootDir: __dirname,
   },
+  rules: {
+    ...base.rules,
+    'import/extensions': ['error', 'ignorePackages'],
+  },
 };

@@ -91,7 +91,16 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
-    'import/extensions': ['error', 'always'],
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        ignorePackages: true,
+        pattern: {
+          ts: 'never',
+        },
+      },
+    ],
     'import/first': 'error',
     'import/order': [
       'error',
