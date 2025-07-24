@@ -1,18 +1,4 @@
 {
-  "include": ["src"],
-  "compilerOptions": {
-    "noEmit": true,
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ESNext"],
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "rewriteRelativeImportExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "strict": true,
-    "types": []
-  }
+  "extends": "../build-config/templates/tsc/base.tsconfig.json",
+  "include": ["src", "lib.ts", "lib.test.ts", "*.config.ts", "package.json"]
 }

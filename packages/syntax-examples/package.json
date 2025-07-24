@@ -18,6 +18,7 @@
     "@timkendrick/syntax": "workspace:*"
   },
   "devDependencies": {
+    "@timkendrick/build-config": "workspace:*",
     "@timkendrick/syntax-codegen": "workspace:*"
   },
   "peerDependencies": {
