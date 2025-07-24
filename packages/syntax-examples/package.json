@@ -17,6 +17,9 @@
   "dependencies": {
     "@timkendrick/syntax": "workspace:*"
   },
+  "devDependencies": {
+    "@timkendrick/syntax-codegen": "workspace:*"
+  },
   "peerDependencies": {
     "eslint": "^8",
     "prettier": "^3",
